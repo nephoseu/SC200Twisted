@@ -22,12 +22,6 @@
         "metadata": {
           "description": "Name of the Microsoft Sentinel solution"
         }
-      },
-      "subscriptionId": {
-        "type": "string",
-        "metadata": {
-          "description": "Azure Subscription ID"
-        }
       }
     },
     "resources": [
@@ -104,15 +98,6 @@
             "publisher": "Microsoft",
             "product": "MicrosoftDefenderForCloud"
           }
-        }
-      },
-      {
-        "type": "Microsoft.Security/pricings",
-        "apiVersion": "2024-01-01",
-        "scope": "[concat('/subscriptions/', parameters('subscriptionId'))]",
-        "name": "default",
-        "properties": {
-          "pricingTier": "Standard"
         }
       }
     ]
