@@ -62,7 +62,8 @@
           "plan": {
             "name": "AzureTrainingLab",
             "publisher": "Microsoft",
-            "product": "OMSGallery/AzureTrainingLab"
+            "product": "OMSGallery/AzureTrainingLab",
+            "promotionCode": ""
           }
         }
       },
@@ -79,7 +80,8 @@
           "plan": {
             "name": "MicrosoftDefenderXDR",
             "publisher": "Microsoft",
-            "product": "OMSGallery/MicrosoftDefenderXDR"
+            "product": "OMSGallery/MicrosoftDefenderXDR",
+            "promotionCode": ""
           }
         }
       },
@@ -96,7 +98,8 @@
           "plan": {
             "name": "MicrosoftDefenderForCloud",
             "publisher": "Microsoft",
-            "product": "OMSGallery/MicrosoftDefenderForCloud"
+            "product": "OMSGallery/MicrosoftDefenderForCloud",
+            "promotionCode": ""
           }
         }
       }
