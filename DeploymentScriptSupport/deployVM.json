@@ -138,24 +138,6 @@
                     }
                 ]
             }
-        },
-        {
-            "type": "Microsoft.Compute/virtualMachines/providers/schedules",
-            "apiVersion": "2019-12-01",
-            "name": "[concat(parameters('vmName'), '/Microsoft.DevTestLab.autoShutdown')]",
-            "location": "[parameters('location')]",
-            "properties": {
-                "status": "Enabled",
-                "taskType": "ComputeVmShutdownTask",
-                "dailyRecurrence": {
-                    "time": "01:00"
-                },
-                "timeZoneId": "Central Europe Standard Time",
-                "targetResourceId": "[resourceId('Microsoft.Compute/virtualMachines', parameters('vmName'))]"
-            },
-            "dependsOn": [
-                "[resourceId('Microsoft.Compute/virtualMachines', parameters('vmName'))]"
-            ]
         }
     ],
     "outputs": {
