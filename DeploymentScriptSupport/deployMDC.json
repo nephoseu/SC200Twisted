@@ -4,7 +4,7 @@
     "parameters": {
       "location": {
         "type": "string",
-        "defaultValue": "sweedencentral",
+        "defaultValue": "westeurope",
         "metadata": {
           "description": "Azure region where Defender for Cloud will be enabled"
         }
