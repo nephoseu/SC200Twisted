@@ -58,7 +58,12 @@
           "[resourceId('Microsoft.OperationalInsights/workspaces', parameters('workspaceName'))]"
         ],
         "properties": {
-          "workspaceResourceId": "[resourceId('Microsoft.OperationalInsights/workspaces', parameters('workspaceName'))]"
+          "workspaceResourceId": "[resourceId('Microsoft.OperationalInsights/workspaces', parameters('workspaceName'))]",
+          "plan": {
+            "name": "AzureTrainingLab",
+            "publisher": "Microsoft",
+            "product": "AzureTrainingLab"
+          }
         }
       },
       {
@@ -70,7 +75,12 @@
           "[resourceId('Microsoft.OperationalInsights/workspaces', parameters('workspaceName'))]"
         ],
         "properties": {
-          "workspaceResourceId": "[resourceId('Microsoft.OperationalInsights/workspaces', parameters('workspaceName'))]"
+          "workspaceResourceId": "[resourceId('Microsoft.OperationalInsights/workspaces', parameters('workspaceName'))]",
+          "plan": {
+            "name": "MicrosoftDefenderXDR",
+            "publisher": "Microsoft",
+            "product": "MicrosoftDefenderXDR"
+          }
         }
       },
       {
@@ -82,13 +92,18 @@
           "[resourceId('Microsoft.OperationalInsights/workspaces', parameters('workspaceName'))]"
         ],
         "properties": {
-          "workspaceResourceId": "[resourceId('Microsoft.OperationalInsights/workspaces', parameters('workspaceName'))]"
+          "workspaceResourceId": "[resourceId('Microsoft.OperationalInsights/workspaces', parameters('workspaceName'))]",
+          "plan": {
+            "name": "MicrosoftDefenderForCloud",
+            "publisher": "Microsoft",
+            "product": "MicrosoftDefenderForCloud"
+          }
         }
       },
       {
         "type": "Microsoft.Security/pricings",
         "apiVersion": "2024-01-01",
-        "name": "default",
+        "name": "[concat(parameters('workspaceName'), '/Standard')]",
         "properties": {
           "pricingTier": "Standard"
         }
