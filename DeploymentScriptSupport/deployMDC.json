@@ -129,7 +129,7 @@
         "name": "Api",
         "properties": {
           "pricingTier": "Standard",
-          "subPlan": "P1"
+          "SubPlan": "P1"
         }
       }
     ]
