@@ -9,13 +9,6 @@
           "description": "Azure region where all resources will be deployed"
         }
       },
-      "resourceGroupName": {
-        "type": "string",
-        "defaultValue": "rgSentinel",
-        "metadata": {
-          "description": "Name of the Resource Group"
-        }
-      },
       "workspaceName": {
         "type": "string",
         "defaultValue": "lawSentinel",
@@ -33,20 +26,10 @@
     },
     "resources": [
       {
-        "type": "Microsoft.Resources/resourceGroups",
-        "apiVersion": "2021-04-01",
-        "name": "[parameters('resourceGroupName')]",
-        "location": "[parameters('location')]",
-        "properties": {}
-      },
-      {
         "type": "Microsoft.OperationalInsights/workspaces",
         "apiVersion": "2021-12-01-preview",
         "name": "[parameters('workspaceName')]",
         "location": "[parameters('location')]",
-        "dependsOn": [
-          "[resourceId('Microsoft.Resources/resourceGroups', parameters('resourceGroupName'))]"
-        ],
         "properties": {
           "sku": {
             "name": "PerGB2018"
@@ -67,4 +50,4 @@
         }
       }
     ]
-  }
+}
