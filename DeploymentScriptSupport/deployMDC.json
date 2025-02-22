@@ -13,7 +13,7 @@
     "resources": [
       {
         "type": "Microsoft.Security/pricings",
-        "apiVersion": "2021-01-15",
+        "apiVersion": "2024-01-01",
         "name": "default",
         "location": "[parameters('location')]",
         "properties": {
@@ -22,7 +22,7 @@
       },
       {
         "type": "Microsoft.Security/pricings",
-        "apiVersion": "2021-01-15",
+        "apiVersion": "2024-01-01",
         "name": "VirtualMachines",
         "properties": {
           "pricingTier": "Standard"
@@ -30,7 +30,7 @@
       },
       {
         "type": "Microsoft.Security/pricings",
-        "apiVersion": "2021-01-15",
+        "apiVersion": "2024-01-01",
         "name": "AppServices",
         "properties": {
           "pricingTier": "Standard"
@@ -38,7 +38,7 @@
       },
       {
         "type": "Microsoft.Security/pricings",
-        "apiVersion": "2021-01-15",
+        "apiVersion": "2024-01-01",
         "name": "SqlServers",
         "properties": {
           "pricingTier": "Standard"
@@ -46,7 +46,7 @@
       },
       {
         "type": "Microsoft.Security/pricings",
-        "apiVersion": "2021-01-15",
+        "apiVersion": "2024-01-01",
         "name": "StorageAccounts",
         "properties": {
           "pricingTier": "Standard"
@@ -54,7 +54,7 @@
       },
       {
         "type": "Microsoft.Security/pricings",
-        "apiVersion": "2021-01-15",
+        "apiVersion": "2024-01-01",
         "name": "KeyVaults",
         "properties": {
           "pricingTier": "Standard"
@@ -62,7 +62,7 @@
       },
       {
         "type": "Microsoft.Security/pricings",
-        "apiVersion": "2021-01-15",
+        "apiVersion": "2024-01-01",
         "name": "KubernetesService",
         "properties": {
           "pricingTier": "Standard"
@@ -70,7 +70,7 @@
       },
       {
         "type": "Microsoft.Security/pricings",
-        "apiVersion": "2021-01-15",
+        "apiVersion": "2024-01-01",
         "name": "ContainerRegistries",
         "properties": {
           "pricingTier": "Standard"
@@ -78,7 +78,7 @@
       },
       {
         "type": "Microsoft.Security/pricings",
-        "apiVersion": "2021-01-15",
+        "apiVersion": "2024-01-01",
         "name": "Dns",
         "properties": {
           "pricingTier": "Standard"
@@ -86,7 +86,7 @@
       },
       {
         "type": "Microsoft.Security/pricings",
-        "apiVersion": "2021-01-15",
+        "apiVersion": "2024-01-01",
         "name": "OpenSourceRelationalDatabases",
         "properties": {
           "pricingTier": "Standard"
