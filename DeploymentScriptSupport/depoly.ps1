@@ -37,6 +37,9 @@ $location = "swedencentral"
 Invoke-WebRequest -Uri $sentinelrepoUrl -OutFile $templatePathSentinel
 Invoke-WebRequest -Uri $MDCrepoUrl -OutFile $templatePathMDC
 
+# Create a resource group (if it doesn’t exist)
+az group create --name $resourceGroupName --location $location
+
 #Deploying MDC
 
 $templateFile = $templatePathMDC  # Update with the actual path to your ARM template
@@ -57,8 +60,7 @@ $resourceGroupName = "rgSentinel"
 $templateFile = $templatePathSentinel  # Update with the actual path to your ARM template
 $deploymentName = "SentinelDeployment"
 
-# Create a resource group (if it doesn’t exist)
-az group create --name $resourceGroupName --location $location
+
 
 # Deploy the ARM template
 az deployment group create `
