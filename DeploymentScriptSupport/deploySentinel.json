@@ -48,6 +48,72 @@
         "properties": {
           "state": "Enabled"
         }
+      },
+      {
+        "type": "Microsoft.OperationsManagement/solutions",
+        "apiVersion": "2015-11-01-preview",
+        "name": "[concat(parameters('workspaceName'), '(AzureTrainingLab)')]",
+        "location": "[parameters('location')]",
+        "dependsOn": [
+          "[resourceId('Microsoft.OperationalInsights/workspaces', parameters('workspaceName'))]"
+        ],
+        "properties": {
+          "workspaceResourceId": "[resourceId('Microsoft.OperationalInsights/workspaces', parameters('workspaceName'))]",
+          "containedResources": [],
+          "plan": {
+            "name": "AzureTrainingLab",
+            "publisher": "azuresentinel",
+            "product": "AzureTrainingLab"
+          }
+        }
+      },
+      {
+        "type": "Microsoft.OperationsManagement/solutions",
+        "apiVersion": "2015-11-01-preview",
+        "name": "[concat(parameters('workspaceName'), '(MicrosoftDefenderXDR)')]",
+        "location": "[parameters('location')]",
+        "dependsOn": [
+          "[resourceId('Microsoft.OperationalInsights/workspaces', parameters('workspaceName'))]"
+        ],
+        "properties": {
+          "workspaceResourceId": "[resourceId('Microsoft.OperationalInsights/workspaces', parameters('workspaceName'))]",
+          "containedResources": [],
+          "plan": {
+            "name": "MicrosoftDefenderXDR",
+            "publisher": "Microsoft",
+            "product": "MicrosoftDefenderXDR"
+          }
+        }
+      },
+      {
+        "type": "Microsoft.OperationsManagement/solutions",
+        "apiVersion": "2015-11-01-preview",
+        "name": "[concat(parameters('workspaceName'), '(MicrosoftDefenderForCloud)')]",
+        "location": "[parameters('location')]",
+        "dependsOn": [
+          "[resourceId('Microsoft.OperationalInsights/workspaces', parameters('workspaceName'))]"
+        ],
+        "properties": {
+          "workspaceResourceId": "[resourceId('Microsoft.OperationalInsights/workspaces', parameters('workspaceName'))]",
+          "containedResources": [],
+          "plan": {
+            "name": "MicrosoftDefenderForCloud",
+            "publisher": "Microsoft",
+            "product": "MicrosoftDefenderForCloud"
+          }
+        }
+      },
+      {
+        "type": "Microsoft.Security/pricings",
+        "apiVersion": "2021-01-15",
+        "name": "default",
+        "location": "[parameters('location')]",
+        "dependsOn": [
+          "[resourceId('Microsoft.OperationalInsights/workspaces', parameters('workspaceName'))]"
+        ],
+        "properties": {
+          "pricingTier": "Standard"
+        }
       }
     ]
 }

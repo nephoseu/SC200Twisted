@@ -1,0 +1,53 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+      "location": {
+        "type": "string",
+        "defaultValue": "swedencentral",
+        "metadata": {
+          "description": "Azure region where all resources will be deployed"
+        }
+      },
+      "workspaceName": {
+        "type": "string",
+        "defaultValue": "lawSentinel",
+        "metadata": {
+          "description": "Name of the Log Analytics Workspace"
+        }
+      },
+      "sentinelName": {
+        "type": "string",
+        "defaultValue": "socSentinel",
+        "metadata": {
+          "description": "Name of the Microsoft Sentinel solution"
+        }
+      }
+    },
+    "resources": [
+      {
+        "type": "Microsoft.OperationalInsights/workspaces",
+        "apiVersion": "2021-12-01-preview",
+        "name": "[parameters('workspaceName')]",
+        "location": "[parameters('location')]",
+        "properties": {
+          "sku": {
+            "name": "PerGB2018"
+          },
+          "retentionInDays": 90
+        }
+      },
+      {
+        "type": "Microsoft.OperationalInsights/workspaces/providers/onboardingStates",
+        "apiVersion": "2021-03-01-preview",
+        "name": "[concat(parameters('workspaceName'), '/Microsoft.SecurityInsights/default')]",
+        "location": "[parameters('location')]",
+        "dependsOn": [
+          "[resourceId('Microsoft.OperationalInsights/workspaces', parameters('workspaceName'))]"
+        ],
+        "properties": {
+          "state": "Enabled"
+        }
+      }
+    ]
+}
