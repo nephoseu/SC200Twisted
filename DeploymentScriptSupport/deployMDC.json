@@ -4,13 +4,21 @@
     "parameters": {
       "location": {
         "type": "string",
-        "defaultValue": "westeurope",
+        "defaultValue": "swedencentral",
         "metadata": {
           "description": "Azure region where Defender for Cloud will be enabled"
         }
       }
     },
     "resources": [
+      {
+        "type": "Microsoft.Security/pricings",
+        "apiVersion": "2024-01-01",
+        "name": "CloudPosture",
+        "properties": {
+          "pricingTier": "Standard"
+        }
+      },
       {
         "type": "Microsoft.Security/pricings",
         "apiVersion": "2024-01-01",
@@ -118,17 +126,10 @@
       {
         "type": "Microsoft.Security/pricings",
         "apiVersion": "2024-01-01",
-        "name": "CloudPosture",
-        "properties": {
-          "pricingTier": "Standard"
-        }
-      },
-      {
-        "type": "Microsoft.Security/pricings",
-        "apiVersion": "2024-01-01",
         "name": "Api",
         "properties": {
-          "pricingTier": "Standard"
+          "pricingTier": "Standard",
+          "subPlan": "P1"
         }
       }
     ]
