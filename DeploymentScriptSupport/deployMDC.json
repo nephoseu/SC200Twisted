@@ -14,24 +14,7 @@
       {
         "type": "Microsoft.Security/pricings",
         "apiVersion": "2024-01-01",
-        "name": "default",
-        "location": "[parameters('location')]",
-        "properties": {
-          "pricingTier": "Standard"
-        }
-      },
-      {
-        "type": "Microsoft.Security/pricings",
-        "apiVersion": "2024-01-01",
         "name": "VirtualMachines",
-        "properties": {
-          "pricingTier": "Standard"
-        }
-      },
-      {
-        "type": "Microsoft.Security/pricings",
-        "apiVersion": "2024-01-01",
-        "name": "AppServices",
         "properties": {
           "pricingTier": "Standard"
         }
@@ -47,6 +30,14 @@
       {
         "type": "Microsoft.Security/pricings",
         "apiVersion": "2024-01-01",
+        "name": "AppServices",
+        "properties": {
+          "pricingTier": "Standard"
+        }
+      },
+      {
+        "type": "Microsoft.Security/pricings",
+        "apiVersion": "2024-01-01",
         "name": "StorageAccounts",
         "properties": {
           "pricingTier": "Standard"
@@ -55,7 +46,7 @@
       {
         "type": "Microsoft.Security/pricings",
         "apiVersion": "2024-01-01",
-        "name": "KeyVaults",
+        "name": "SqlServerVirtualMachines",
         "properties": {
           "pricingTier": "Standard"
         }
@@ -71,7 +62,15 @@
       {
         "type": "Microsoft.Security/pricings",
         "apiVersion": "2024-01-01",
-        "name": "ContainerRegistries",
+        "name": "ContainerRegistry",
+        "properties": {
+          "pricingTier": "Standard"
+        }
+      },
+      {
+        "type": "Microsoft.Security/pricings",
+        "apiVersion": "2024-01-01",
+        "name": "KeyVaults",
         "properties": {
           "pricingTier": "Standard"
         }
@@ -87,7 +86,47 @@
       {
         "type": "Microsoft.Security/pricings",
         "apiVersion": "2024-01-01",
+        "name": "Arm",
+        "properties": {
+          "pricingTier": "Standard"
+        }
+      },
+      {
+        "type": "Microsoft.Security/pricings",
+        "apiVersion": "2024-01-01",
         "name": "OpenSourceRelationalDatabases",
+        "properties": {
+          "pricingTier": "Standard"
+        }
+      },
+      {
+        "type": "Microsoft.Security/pricings",
+        "apiVersion": "2024-01-01",
+        "name": "CosmosDbs",
+        "properties": {
+          "pricingTier": "Standard"
+        }
+      },
+      {
+        "type": "Microsoft.Security/pricings",
+        "apiVersion": "2024-01-01",
+        "name": "Containers",
+        "properties": {
+          "pricingTier": "Standard"
+        }
+      },
+      {
+        "type": "Microsoft.Security/pricings",
+        "apiVersion": "2024-01-01",
+        "name": "CloudPosture",
+        "properties": {
+          "pricingTier": "Standard"
+        }
+      },
+      {
+        "type": "Microsoft.Security/pricings",
+        "apiVersion": "2024-01-01",
+        "name": "Api",
         "properties": {
           "pricingTier": "Standard"
         }
