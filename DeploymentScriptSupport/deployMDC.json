@@ -1,0 +1,96 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+      "location": {
+        "type": "string",
+        "defaultValue": "westeurope",
+        "metadata": {
+          "description": "Azure region where Defender for Cloud will be enabled"
+        }
+      }
+    },
+    "resources": [
+      {
+        "type": "Microsoft.Security/pricings",
+        "apiVersion": "2021-01-15",
+        "name": "default",
+        "location": "[parameters('location')]",
+        "properties": {
+          "pricingTier": "Standard"
+        }
+      },
+      {
+        "type": "Microsoft.Security/pricings",
+        "apiVersion": "2021-01-15",
+        "name": "VirtualMachines",
+        "properties": {
+          "pricingTier": "Standard"
+        }
+      },
+      {
+        "type": "Microsoft.Security/pricings",
+        "apiVersion": "2021-01-15",
+        "name": "AppServices",
+        "properties": {
+          "pricingTier": "Standard"
+        }
+      },
+      {
+        "type": "Microsoft.Security/pricings",
+        "apiVersion": "2021-01-15",
+        "name": "SqlServers",
+        "properties": {
+          "pricingTier": "Standard"
+        }
+      },
+      {
+        "type": "Microsoft.Security/pricings",
+        "apiVersion": "2021-01-15",
+        "name": "StorageAccounts",
+        "properties": {
+          "pricingTier": "Standard"
+        }
+      },
+      {
+        "type": "Microsoft.Security/pricings",
+        "apiVersion": "2021-01-15",
+        "name": "KeyVaults",
+        "properties": {
+          "pricingTier": "Standard"
+        }
+      },
+      {
+        "type": "Microsoft.Security/pricings",
+        "apiVersion": "2021-01-15",
+        "name": "KubernetesService",
+        "properties": {
+          "pricingTier": "Standard"
+        }
+      },
+      {
+        "type": "Microsoft.Security/pricings",
+        "apiVersion": "2021-01-15",
+        "name": "ContainerRegistries",
+        "properties": {
+          "pricingTier": "Standard"
+        }
+      },
+      {
+        "type": "Microsoft.Security/pricings",
+        "apiVersion": "2021-01-15",
+        "name": "Dns",
+        "properties": {
+          "pricingTier": "Standard"
+        }
+      },
+      {
+        "type": "Microsoft.Security/pricings",
+        "apiVersion": "2021-01-15",
+        "name": "OpenSourceRelationalDatabases",
+        "properties": {
+          "pricingTier": "Standard"
+        }
+      }
+    ]
+  }
