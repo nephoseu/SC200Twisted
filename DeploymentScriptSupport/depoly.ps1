@@ -107,8 +107,8 @@ az network nsg rule create `
 az vm auto-shutdown `
   --resource-group rgVirtualMachines `
   --name Win11VM `
-  --time 01:00 `
-  --time-zone "Central Europe Standard Time"
+  --time 0100 `
+#  --time-zone "Central Europe Standard Time"
 
 # Output Public IP
 $publicIP = az vm show -d --resource-group rgVirtualMachines --name Win11VM --query publicIps -o tsv
