@@ -37,6 +37,9 @@ $location = "swedencentral"
 Invoke-WebRequest -Uri $sentinelrepoUrl -OutFile $templatePathSentinel
 Invoke-WebRequest -Uri $MDCrepoUrl -OutFile $templatePathMDC
 
+
+$deploymentName = "MDCDeployment"
+$resourceGroupName = "rgSentinel"
 # Create a resource group (if it doesn’t exist)
 az group create --name $resourceGroupName --location $location
 
