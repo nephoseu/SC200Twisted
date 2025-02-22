@@ -41,6 +41,7 @@ Invoke-WebRequest -Uri $MDCrepoUrl -OutFile $templatePathMDC
 
 $templateFile = $templatePathMDC  # Update with the actual path to your ARM template
 $deploymentName = "MDCDeployment"
+$resourceGroupName = "rgSentinel"
 
 az deployment group create `
     --name $deploymentName `
