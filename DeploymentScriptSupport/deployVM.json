@@ -49,7 +49,7 @@
                             "patchMode": "AutomaticByPlatform"
                         },
                         "azureAdJoin": {
-                            "enabled": true  // **Enables Microsoft Entra ID join**
+                            "enabled": true
                         }
                     }
                 },
@@ -140,9 +140,9 @@
             }
         },
         {
-            "type": "Microsoft.DevTestLab/schedules",
-            "apiVersion": "2018-10-15-preview",
-            "name": "[concat(parameters('vmName'), '/shutdown')]",
+            "type": "Microsoft.Compute/virtualMachines/providers/schedules",
+            "apiVersion": "2019-12-01",
+            "name": "[concat(parameters('vmName'), '/Microsoft.DevTestLab.autoShutdown')]",
             "location": "[parameters('location')]",
             "properties": {
                 "status": "Enabled",
@@ -152,7 +152,10 @@
                 },
                 "timeZoneId": "Central Europe Standard Time",
                 "targetResourceId": "[resourceId('Microsoft.Compute/virtualMachines', parameters('vmName'))]"
-            }
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Compute/virtualMachines', parameters('vmName'))]"
+            ]
         }
     ],
     "outputs": {
