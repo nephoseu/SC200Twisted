@@ -78,9 +78,9 @@
         "properties": {
           "workspaceResourceId": "[resourceId('Microsoft.OperationalInsights/workspaces', parameters('workspaceName'))]",
           "plan": {
-            "name": "MicrosoftDefenderXDR",
+            "name": "SecurityInsights(MicrosoftDefenderXDR)",
             "publisher": "Microsoft",
-            "product": "OMSGallery/MicrosoftDefenderXDR",
+            "product": "OMSGallery/SecurityInsights(MicrosoftDefenderXDR)",
             "promotionCode": ""
           }
         }
@@ -96,9 +96,9 @@
         "properties": {
           "workspaceResourceId": "[resourceId('Microsoft.OperationalInsights/workspaces', parameters('workspaceName'))]",
           "plan": {
-            "name": "MicrosoftDefenderForCloud",
+            "name": "SecurityInsights(MicrosoftDefenderForCloud)",
             "publisher": "Microsoft",
-            "product": "OMSGallery/MicrosoftDefenderForCloud",
+            "product": "OMSGallery/SecurityInsights(MicrosoftDefenderForCloud)",
             "promotionCode": ""
           }
         }
