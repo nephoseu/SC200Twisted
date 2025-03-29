@@ -112,7 +112,7 @@ az network nsg rule create `
 az vm auto-shutdown `
   --resource-group rgVirtualMachines `
   --name Win11VM `
-  --time 0100 `
+  --time 2230 `
 #  --time-zone "Central Europe Standard Time"
 
 # Output Public IP
